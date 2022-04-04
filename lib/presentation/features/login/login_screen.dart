@@ -125,12 +125,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Haven't an account? "),
-                        Text(
-                          'Sign Up',
-                          style: Theme.of(context).textTheme.bodyText2?.apply(
-                              color: Color.fromRGBO(49, 192, 244, 1),
-                              fontWeightDelta: 2),
+                        const Text("Haven't an account? ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black)),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, Routes.signup);
+                          },
+                          child: Text(
+                            'Sign Up',
+                            style: Theme.of(context).textTheme.bodyText2?.apply(
+                                color: Color.fromRGBO(49, 192, 244, 1),
+                                fontWeightDelta: 2),
+                          ),
                         ),
                       ],
                     ),

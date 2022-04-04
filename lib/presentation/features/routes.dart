@@ -7,6 +7,9 @@ import 'login/login_screen.dart';
 import 'main/dashboard/dashboard_screen.dart';
 import 'main/home/bloc/home_bloc.dart';
 import 'main/home/home_page.dart';
+import 'new_pass/new_pass_creen.dart';
+import 'otp_confirm/otp_confirm_screen.dart';
+import 'sign_up/sign_up_creen.dart';
 import 'start/start_screen.dart';
 
 class Routes {
@@ -14,6 +17,9 @@ class Routes {
   static const String dashboard = 'dashboard';
   static const String login = 'login';
   static const String forgotpass = 'forgotpass';
+  static const String otpconfirm = 'otpconfirm';
+  static const String newpass = 'newpass';
+  static const String signup = 'signup';
 
   static Map<String, WidgetBuilder> _getAll(RouteSettings settings) => {
         Routes.dashboard: (context) => DashboardScreen(
@@ -27,6 +33,9 @@ class Routes {
         Routes.login: (context) => const LoginScreen(),
         Routes.start: (context) => const StartScreen(),
         Routes.forgotpass: (context) => const ForgotPassScreen(),
+        Routes.otpconfirm: (context) => const OTPConfirmScreen(),
+        Routes.newpass: (context) => const NewPassScreen(),
+        Routes.signup: (context) => const SignUpScreen(),
       };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {

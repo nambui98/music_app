@@ -42,7 +42,10 @@ class _StartScreenState extends State<StartScreen> {
                 ]),
                 const Spacer(),
                 Text('Feel your soul',
-                    style: Theme.of(context).textTheme.headline4),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4
+                        ?.apply(color: Colors.white)),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 36, vertical: 5),

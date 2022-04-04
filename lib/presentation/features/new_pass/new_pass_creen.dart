@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../routes.dart';
 
-class ForgotPassScreen extends StatelessWidget {
-  const ForgotPassScreen({Key? key}) : super(key: key);
+class NewPassScreen extends StatelessWidget {
+  const NewPassScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Forgot password'),
+        title: Text('New Password'),
       ),
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -27,24 +27,26 @@ class ForgotPassScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 24),
+                      child: Text(
+                        'Your new password',
+                        style: Theme.of(context).textTheme.headline6,
+                      ),
+                    ),
                     TextFormField(
                       cursorColor: Theme.of(context).cursorColor,
                       initialValue: '',
                       decoration: const InputDecoration(
-                        // contentPadding:
-                        //     EdgeInsets.symmetric(horizontal: 0, vertical: 0),
-                        // prefixIconConstraints:
-                        //     BoxConstraints(minWidth: 23, maxHeight: 20),
-                        // prefixIcon:
                         prefixIcon: Padding(
                           padding: EdgeInsets.only(right: 10, bottom: 5),
                           child: Icon(
-                            Icons.mail_outline,
+                            Icons.password_sharp,
                             color: Colors.black,
                           ),
                         ),
-                        hintText: 'Email',
-                        helperText: 'Type your emaill address using sign up',
+                        hintText: 'New password',
+                        helperText: 'Message',
                         helperStyle:
                             TextStyle(color: Color.fromRGBO(18, 18, 29, .3)),
                         focusedBorder: UnderlineInputBorder(
@@ -56,17 +58,40 @@ class ForgotPassScreen extends StatelessWidget {
                                 color: Color.fromRGBO(18, 18, 29, .1))),
                       ),
                     ),
-                    // Spacer(),
+                    TextFormField(
+                      cursorColor: Theme.of(context).cursorColor,
+                      initialValue: '',
+                      decoration: const InputDecoration(
+                        prefixIcon: Padding(
+                          padding: EdgeInsets.only(right: 10, bottom: 5),
+                          child: Icon(
+                            Icons.password_sharp,
+                            color: Colors.black,
+                          ),
+                        ),
+                        hintText: 'Confirm new password',
+                        helperText: '',
+                        helperStyle:
+                            TextStyle(color: Color.fromRGBO(18, 18, 29, .3)),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(49, 192, 244, 1)),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color.fromRGBO(18, 18, 29, .1))),
+                      ),
+                    ),
                     const Spacer(),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, Routes.otpconfirm);
+                        // Navigator.pushNamed(context, Routes.otpconfirm);
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(MediaQuery.of(context).size.width, 56),
                       ),
                       child: Text(
-                        'SEND request'.toUpperCase(),
+                        'Confirm'.toUpperCase(),
                         style: TextStyle(fontWeight: FontWeight.w500),
                       ),
                     ),
