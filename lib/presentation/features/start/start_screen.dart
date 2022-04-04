@@ -49,7 +49,10 @@ class _StartScreenState extends State<StartScreen> {
                   child: Text(
                       'Create an account to run wild through our curated experiences.',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyText1),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText1
+                          ?.apply(color: Colors.white)),
                 ),
                 const SizedBox(
                   height: 19,

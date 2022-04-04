@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../components/di/injection/injection.dart';
+import 'forgot_pass/forgot_pass_creen.dart';
 import 'login/login_screen.dart';
 import 'main/dashboard/dashboard_screen.dart';
 import 'main/home/bloc/home_bloc.dart';
@@ -12,6 +13,7 @@ class Routes {
   static const String start = 'start';
   static const String dashboard = 'dashboard';
   static const String login = 'login';
+  static const String forgotpass = 'forgotpass';
 
   static Map<String, WidgetBuilder> _getAll(RouteSettings settings) => {
         Routes.dashboard: (context) => DashboardScreen(
@@ -24,6 +26,7 @@ class Routes {
             ),
         Routes.login: (context) => const LoginScreen(),
         Routes.start: (context) => const StartScreen(),
+        Routes.forgotpass: (context) => const ForgotPassScreen(),
       };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
