@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 import 'features/login/login_screen.dart';
 import 'features/routes.dart';
 import 'features/start/start_screen.dart';
@@ -10,6 +10,10 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.dark,
+    ));
     return MaterialApp(
       initialRoute: Routes.start,
       onGenerateRoute: Routes.generateRoute,
