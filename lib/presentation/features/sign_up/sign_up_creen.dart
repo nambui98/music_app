@@ -169,7 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const Spacer(),
                     ElevatedButton(
                       onPressed: () {
-                        // Navigator.pushNamed(context, Routes.otpconfirm);
+                        Navigator.pushNamed(context, Routes.listsongs);
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(MediaQuery.of(context).size.width, 56),
@@ -188,10 +188,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 color: Colors.black)),
                         TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, Routes.signup);
+                            Navigator.pushNamed(context, Routes.listsongs);
                           },
                           child: Text(
-                            'Sign Up',
+                            'Sign Ip',
                             style: Theme.of(context).textTheme.bodyText2?.apply(
                                 color: const Color.fromRGBO(49, 192, 244, 1),
                                 fontWeightDelta: 2),

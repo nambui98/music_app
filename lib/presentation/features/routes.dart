@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../components/di/injection/injection.dart';
 import 'forgot_pass/forgot_pass_creen.dart';
+import 'list_songs/list_songs_screen.dart';
 import 'login/login_screen.dart';
 import 'main/dashboard/dashboard_screen.dart';
 import 'main/home/bloc/home_bloc.dart';
@@ -20,6 +21,7 @@ class Routes {
   static const String otpconfirm = 'otpconfirm';
   static const String newpass = 'newpass';
   static const String signup = 'signup';
+  static const String listsongs = 'listsongs';
 
   static Map<String, WidgetBuilder> _getAll(RouteSettings settings) => {
         Routes.dashboard: (context) => DashboardScreen(
@@ -36,6 +38,7 @@ class Routes {
         Routes.otpconfirm: (context) => const OTPConfirmScreen(),
         Routes.newpass: (context) => const NewPassScreen(),
         Routes.signup: (context) => const SignUpScreen(),
+        Routes.listsongs: (context) => const ListSongsScreen(),
       };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
